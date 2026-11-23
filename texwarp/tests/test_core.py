@@ -57,9 +57,9 @@ CASES = [("zero_amp", "_check_zero_amp"), ("bounded", "_check_bounded"), ("det",
 
 
 @pytest.mark.parametrize("name,check", CASES, ids=[c[0] for c in CASES])
-def test_spec(name, check):
+def test_warp_spec(name, check):
     fn = globals().get(check)
     if fn is None:
-        assert TexWarp() is not None
+        assert texwarp.TexWarp(0.1, 3) is not None
         return
     assert fn() is True
