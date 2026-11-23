@@ -65,6 +65,6 @@ CASES = [("len", "_check_len"), ("dc", "_check_dc"), ("parseval", "_check_parsev
 def test_spec(name, check):
     fn = globals().get(check)
     if fn is None:
-        assert Dft() is not None
+        assert dft.Dft() is not None
         return
     assert fn() is True
