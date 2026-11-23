@@ -3,6 +3,7 @@ import math
 import pytest
 
 import gamut
+from gamut import GamutMap
 
 def _raises(fn, exc=ValueError):
     try:
