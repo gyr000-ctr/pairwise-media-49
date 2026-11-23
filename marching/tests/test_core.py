@@ -3,6 +3,7 @@ import math
 import pytest
 
 import marching
+from marching import Marching
 
 def _raises(fn, exc=ValueError):
     try:
